@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"tab_size": 2,
+		"word_wrap": false,
+		"draw_minimap_border": true,
+		"highlight_line": true,
+		"default_line_ending": "unix",
+		"highlight_modified_tabs": true,
+		"bold_folder_labels": true
+	}
+}
