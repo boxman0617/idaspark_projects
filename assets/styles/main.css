@@ -1,0 +1,82 @@
+body {
+  background-color: #f2faf0;
+}
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #9ad685;
+  z-index: 100;
+  border-bottom: 2px solid #277e86;
+}
+#main-header .logo,
+#main-header .navigation {
+  float: left;
+}
+#main-header .logo a {
+  padding: 5px 0 5px 15px;
+  display: inline-block;
+}
+#main-header .logo a:hover {
+  text-decoration: none;
+}
+#main-header .logo a .fa,
+#main-header .logo a .ida,
+#main-header .logo a .spark {
+  position: relative;
+}
+#main-header .logo a .fa {
+  font-size: 25px;
+  color: #f2faf0;
+  top: -3px;
+  z-index: 101;
+}
+#main-header .logo a .ida {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  color: #277e86;
+  z-index: 102;
+  margin-left: -4px;
+}
+#main-header .logo a .spark {
+  font-size: 13px;
+  font-family: 'Michroma', sans-serif;
+  color: #f2faf0;
+  z-index: 103;
+  margin-left: 1px;
+  text-transform: uppercase;
+}
+#main-header .navigation {
+  margin-left: 20px;
+  height: 100%;
+}
+#main-header .navigation ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#main-header .navigation ul li {
+  margin: 0;
+  height: 100%;
+  display: inline-block;
+}
+#main-header .navigation ul li a {
+  display: block;
+  padding: 14px 0;
+  width: 75px;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Michroma', sans-serif;
+  color: #f2faf0;
+  text-transform: uppercase;
+  -webkit-transition: background-color 300ms;
+  -moz-transition: background-color 300ms;
+  -ms-transition: background-color 300ms;
+  -o-transition: background-color 300ms;
+}
+#main-header .navigation ul li a:hover {
+  background-color: #8ad072;
+  text-decoration: none;
+}
