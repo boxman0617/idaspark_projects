@@ -15,7 +15,7 @@ module.exports = {
 
     'getChildren': function(callback) {
       if(this.parent_id === 0) {
-        Categories.findByParentId(this.id).done(function(err, children) {
+        Categories.findByParent_id(this.id).done(function(err, children) {
           callback(children);
         });
       }

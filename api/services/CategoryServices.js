@@ -1,23 +1,10 @@
-exports.getCategories = function() {
-  var categories = {};
-  var returnNow = function() {
-    return
-  };
+exports.getParents = function(next) {
 
-  Categories.findByParentId(0, function(err, category) {
-    category.getChildren(function(children) {
-      for(var i in children) {
-        if(categories.hasOwnProperty(category.name))
-        categories[category.name].push(children[i].name);
-      }
+  Categories.findByParent_id(0, function(err, categories) {
+    if(err) {
+      return console.log(err);
+    }
 
-
-    });
-  });
-};
-
-exports.getParents = function() {
-  Categories.findByParentId(0, function(err, category) {
-
+    next(categories);
   });
 };
