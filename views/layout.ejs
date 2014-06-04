@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap 101 Template</title>
 
+    <% if(process.env.NODE_ENV === 'development') { %>
+    <!-- DEVUSEONLY -->
+    <link href="styles/dev.css" rel="stylesheet">
+    <!-- DEVUSEONLY -->
+    <% } %>
+
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -42,11 +48,45 @@
         </div>
       </div>
     </div>
-    <%- body %>
+    <!-- cat-nav -->
+    <div id="categories-navigation">
+      <div class="container">
+        <ul>
+          <li><a href="/for/home">Home</a>
+            <ul>
+              <li><a href="/for/home/kitchen">Kitchen</a></li>
+              <li><a href="/for/home/bathroom">Bathroom</a></li>
+              <li><a href="/for/home/Bedroom">Bedroom</a></li>
+            </ul>
+          </li>
+          <li><a href="/for/tech">Tech</a>
+            <ul>
+              <li><a href="/for/tech/computers">Computers</a></li>
+              <li><a href="/for/tech/developing">Developing</a></li>
+              <li><a href="/for/tech/tools">Tools</a></li>
+              <li><a href="/for/tech/gadgets">Gadgets</a></li>
+            </ul>
+          </li>
+          <li><a href="/for/food">Food</a></li>
+          <li><a href="/for/business">Business</a></li>
+          <li><a href="/for/office">Office</a></li>
+          <li><a href="/for/games">Games</a></li>
+          <li><a href="/for/more">More</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="container">
+        <%- body %>
+      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/deps/headroom.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

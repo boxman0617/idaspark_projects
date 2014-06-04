@@ -3,7 +3,7 @@
 	top: 0; left: 0; right: 0;
 	background-color: @green-light;
 	z-index: @z-top;
-	border-bottom: 2px solid @blue-highlight;
+	border-bottom: @main-header-border solid @blue-highlight;
 
 	.logo, .navigation {
 		float: left;
@@ -56,16 +56,100 @@
 				display: inline-block;
 				a {
 					display: block;
-					padding: 14px 0;
+					padding: @nav-a-ver 0;
 					width: 75px;
 					text-align: center;
-					font-size: 12px;
+					font-size: @nav-font-size;
 					font-family: @spark;
 					color: @gray-lightest;
 					text-transform: uppercase;
 					.transition(background-color 300ms);
 					&:hover {
 						background-color: darken(@green-light, 5%);
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Headroom CSS
+.headroom {
+	.transition(all 200ms linear);
+}
+
+.headroom--pinned {
+	.translate(0, 0%);
+	opacity: 1;
+}
+
+.headroom--unpinned {
+	opacity: 0;
+	.translate(0, -100%);
+}
+
+#categories-navigation {
+	z-index: @z-top - 1;
+	position: fixed;
+	top: (@nav-a-ver * 2) + @bootstrap-lineheight + @main-header-border;
+	left: 0; right: 0;
+	background-color: darken(@gray-lightest, 10%);
+	.container {
+		line-height: @cat-lineheight;
+		ul {
+			line-height: @cat-lineheight;
+			position: relative;
+			display: inline-table;
+			&:after {
+				content: ""; 
+				clear: both; 
+				display: block;
+			}
+			ul { // Sub Menu
+				border-left: 1px solid @blue-highlight;
+				display: none;
+				padding: 0; margin: 0;
+				position: absolute; 
+				top: 100%;
+				li {
+					display: list-item;
+					float: none;
+					position: relative;
+					padding: 0;
+					a {
+						text-align: left;
+						background-color: @green-lightest;
+						.box-sizing(content-box);
+						padding: @cat-a-ver 0 @cat-a-ver @cat-a-left;
+						width: @cat-a-width;
+						&:hover {
+							background-color: darken(@green-lightest, 5%);
+						}
+					}
+				}
+			}
+			margin: 0; padding: 0;
+			list-style: none;
+			li {
+				line-height: @cat-lineheight;
+				&:hover > ul {
+					display: block;
+				}
+				float: left;
+				margin: 0;
+				padding: @cat-li-ver 15px;
+				display: inline-block;
+				a {
+					line-height: @cat-lineheight;
+					display: block;
+					text-align: center;
+					font-family: @spark;
+					text-transform: uppercase;
+					font-size: @cat-font-size;
+					color: @gray-darkest;
+					&:hover {
+						color: lighten(@gray-darkest, 10%);
 						text-decoration: none;
 					}
 				}
