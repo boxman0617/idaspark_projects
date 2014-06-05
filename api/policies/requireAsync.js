@@ -1,5 +1,5 @@
 /**
- * isAuthenticated
+ * requireAsync
  *
  * @module      :: Policy
  * @description :: Simple policy to allow any authenticated user
@@ -25,7 +25,6 @@ module.exports = function(req, res, next) {
       }
 
       res.locals.categories = cats;
-      console.log(res.locals.categories);
       return next();
     });
   });

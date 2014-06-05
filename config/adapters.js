@@ -17,10 +17,10 @@ module.exports.adapters = {
 
   mysql: {
     module   : 'sails-mysql',
-    host     : 'localhost',
+    host     : require('./local').mysql.host,
     port     : 3306,
-    user     : 'root',
-    password : '',
+    user     : require('./local').mysql.user,
+    password : require('./local').mysql.password,
     database : 'idaspark_projects'
   }
 };

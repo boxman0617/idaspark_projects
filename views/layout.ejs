@@ -52,26 +52,19 @@
     <div id="categories-navigation">
       <div class="container">
         <ul>
-          <li><a href="/for/home">Home</a>
+        <% for(var category in categories) { %>
+          <li><a href="/for/<%= category.toLowerCase() %>"><%= category %></a>
+          <% if(categories[category].length > 0) { %>
             <ul>
-              <li><a href="/for/home/kitchen">Kitchen</a></li>
-              <li><a href="/for/home/bathroom">Bathroom</a></li>
-              <li><a href="/for/home/Bedroom">Bedroom</a></li>
+          <% } %>
+          <% for(var i in categories[category]) { %>
+            <li><a href="/for/<%= category.toLowerCase() %>/<%= categories[category][i].name.toLowerCase() %>"><%= categories[category][i].name %></a></li>
+          <% } %>
+          <% if(categories[category].length > 0) { %>
             </ul>
+          <% } %>
           </li>
-          <li><a href="/for/tech">Tech</a>
-            <ul>
-              <li><a href="/for/tech/computers">Computers</a></li>
-              <li><a href="/for/tech/developing">Developing</a></li>
-              <li><a href="/for/tech/tools">Tools</a></li>
-              <li><a href="/for/tech/gadgets">Gadgets</a></li>
-            </ul>
-          </li>
-          <li><a href="/for/food">Food</a></li>
-          <li><a href="/for/business">Business</a></li>
-          <li><a href="/for/office">Office</a></li>
-          <li><a href="/for/games">Games</a></li>
-          <li><a href="/for/more">More</a></li>
+        <% } %>
         </ul>
       </div>
     </div>
