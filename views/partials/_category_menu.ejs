@@ -1,0 +1,19 @@
+<div id="categories-navigation">
+  <div class="container">
+    <ul>
+    <% for(var category in categories) { %>
+      <li><a href="/for/<%= category.toLowerCase() %>"><%= category %></a>
+      <% if(categories[category].length > 0) { %>
+        <ul>
+      <% } %>
+      <% for(var i in categories[category]) { %>
+        <li><a href="/for/<%= category.toLowerCase() %>/<%= categories[category][i].name.toLowerCase() %>"><%= categories[category][i].name %></a></li>
+      <% } %>
+      <% if(categories[category].length > 0) { %>
+        </ul>
+      <% } %>
+      </li>
+    <% } %>
+    </ul>
+  </div>
+</div>

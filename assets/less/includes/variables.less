@@ -7,12 +7,24 @@
 @green-light: 			#4DBCE9;
 @green-lightest: 		#B4E5F7;
 
-@main-header-bg:     @green-light;
-@main-header-bg-hover:@green-dark;
+@body-bg: 						@gray-lightest;
 
-@cat-menu-bg-color:  @green-light;
-@cat-menu-bg-hover:  @green-dark;
-@cat-menu-color:     @gray-lightest;
+@main-header-bg:     	@green-light;
+@main-header-bg-hover: @green-dark;
+@main-header-border-color: @blue-highlight;
+
+@cat-menu-bg-color:  	@green-light;
+@cat-menu-bg-hover:  	@green-dark;
+@cat-menu-color:     	@gray-lightest;
+
+@footer-border: 			@green-light;
+@footer-bg-color: 		darken(@gray-lightest, 5%);
+
+@markee-a-bg: 				darken(@gray-lightest, 3%);
+@markee-a-bg-hover:		@green-light;
+@markee-a-color: 			@markee-a-bg-hover;
+@markee-a-color-hover:@gray-lightest;
+@markee-border-color: @main-header-border-color;
 
 // Stacking Order [z-index]
 
@@ -48,6 +60,10 @@
 @cat-li-ver: 				6px;
 @cat-a-ver: 				8px;
 @cat-a-left: 				10px;
+@search-box-top: 		7px;
+@search-box-left: 	22px;
+
+@footer-top-padding:10px;
 
 //## Panel Padding/Margin
 @panel-padding: 		20px;
@@ -56,11 +72,16 @@
 
 @main-header-border:2px;
 @cat-border:        2px;
+@markee-border: 		@main-header-border;
 
 // Sizes
 
 @menu-width: 				80px;
 @cat-a-width: 			125px;
+@search-bar-width: 	260px;
+@footer-height: 		100px;
+
+@markee-height: 		533px;
 
 // Breakpoints
 

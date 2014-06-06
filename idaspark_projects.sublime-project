@@ -3,6 +3,7 @@
 	[
 		{
 			"follow_symlinks": true,
+			"folder_exclude_patterns": ["node_modules", ".tmp", "bootstrap"],
 			"path": "."
 		}
 	],
@@ -14,6 +15,13 @@
 		"highlight_line": true,
 		"default_line_ending": "unix",
 		"highlight_modified_tabs": true,
-		"bold_folder_labels": true
+		"bold_folder_labels": true,
+		"todoreview": {
+        "exclude_folders": [
+            "*.git*",
+            "*node_modules*",
+            "*.tmp*"
+        ]
+    }
 	}
 }

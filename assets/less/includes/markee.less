@@ -1,0 +1,31 @@
+#markee {
+	height: @markee-height;
+	#markee-slides {
+		.carousel-inner {
+			.item {
+				img {
+					height: @markee-height;
+					width: 100%;
+				}
+				.caption {
+					.search-in-caption {
+						margin-top: 10px;
+					}
+					background-color: rgba(0, 0, 0, 0.2);
+					position: absolute;
+					top: 100px;
+					right: 10%;
+					left: 40%;
+					color: @gray-lightest;
+					text-align: left;
+					padding: 25px;
+					h1, h2, h3, h4, h5 {
+						margin: 0;
+						font-family: @ida;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+}

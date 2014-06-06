@@ -8,7 +8,6 @@
  *
  */
 module.exports = function(req, res, next) {
-  console.log('Policy');
   var async = require('async');
 
   var cats = {};

@@ -3,9 +3,9 @@
 	top: 0; left: 0; right: 0;
 	background-color: @main-header-bg;
 	z-index: @z-top;
-	border-bottom: @main-header-border solid @blue-highlight;
+	border-bottom: @main-header-border solid @main-header-border-color;
 
-	.logo, .navigation {
+	.logo, .navigation, .search-bar {
 		float: left;
 	}
 
@@ -69,6 +69,26 @@
 						text-decoration: none;
 					}
 				}
+			}
+		}
+	}
+
+	.search-bar {
+		width: @search-bar-width;
+		position: relative;
+		top: @search-box-top;
+		left: @search-box-left;
+	}
+
+	.member {
+		float: right;
+		position: relative;
+		top: @search-box-top;
+		a {
+			color: @gray-lightest;
+			&:hover {
+				text-decoration: none;
+				color: darken(@gray-lightest, 5%);
 			}
 		}
 	}
