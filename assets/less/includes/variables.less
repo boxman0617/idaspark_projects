@@ -26,21 +26,33 @@
 @markee-a-color-hover:@gray-lightest;
 @markee-border-color: @main-header-border-color;
 
+@flat-panel-border-c: @main-header-border-color;
+@flat-panel-bg:       darken(@gray-lightest, 5%);
+@flat-panel-bg-process:@green-light;
+
+@process-circle-bg:   @green-dark;
+@process-circle-color:@gray-lightest;
+@process-color:       @gray-lightest;
+
 // Stacking Order [z-index]
 
 @z-base: 						1;
 @z-top: 						100;
 
 // Font-Sizes
+@font-size-change:   1;
 
-@logo-icon: 				25px;
-@logo-ida: 					24px;
-@logo-spark: 				13px;
-@nav-font-size: 		12px;
-@cat-font-size: 		9px;
+@logo-icon: 				25px + @font-size-change;
+@logo-ida: 					24px + @font-size-change;
+@logo-spark: 				13px + @font-size-change;
+@nav-font-size: 		12px + @font-size-change;
+@cat-font-size: 		9px + @font-size-change;
+@member-font-size:  15px + @font-size-change;
 
 @cat-lineheight: 		@cat-font-size;
-@bootstrap-lineheight: 17px;
+@bootstrap-lineheight: 17px + @font-size-change;
+
+@process-font-size:  25px;
 
 // Fonts
 
@@ -49,6 +61,7 @@
 
 // Padding/Margin
 
+@bottom-gap:         35px;
 @gap: 							10px;
 @wrapper-top-gap: 	30px;
 @row-margin: 				15px;
@@ -62,6 +75,9 @@
 @cat-a-left: 				10px;
 @search-box-top: 		7px;
 @search-box-left: 	22px;
+
+@flat-panel-padding:  10px;
+@process-padding:     20px;
 
 @footer-top-padding:10px;
 
@@ -82,6 +98,9 @@
 @footer-height: 		100px;
 
 @markee-height: 		533px;
+
+@process-circle-size: 50px;
+@process-height:      200px;
 
 // Breakpoints
 

@@ -2,6 +2,12 @@ body {
 	background-color: @body-bg;
 }
 
+#page-content {
+	padding-bottom: @footer-height + @bottom-gap;
+}
+
 .wrapper {
 	margin-top: (@nav-a-ver * 2) + @bootstrap-lineheight + @main-header-border + (@cat-li-ver * 2) + @cat-lineheight;
+	min-height: 100%;
+	position: relative;
 }

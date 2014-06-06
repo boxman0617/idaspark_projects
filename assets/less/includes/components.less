@@ -1,0 +1,47 @@
+.processes {
+  .process-step:after {
+    content: '';
+    position: absolute;
+    background-color: @flat-panel-border-c;
+    height: 20px;
+    width: 52px;
+    right: -34px;
+    top: 50%;
+    margin-top: -10px;
+  }
+}
+
+.flat-panel {
+  border: 2px solid @flat-panel-border-c;
+  background-color: @flat-panel-bg;
+  padding: @flat-panel-padding;
+  &.process {
+    height: @process-height;
+    padding: @process-padding;
+    background-color: @flat-panel-bg-process;
+    position: relative;
+    p {
+      color: @process-color;
+      font-size: 20px;
+      font-family: @spark;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      margin-top: -22px;
+    }
+    .circle {
+      position: absolute;
+      border: 2px solid @flat-panel-border-c;
+      .border-radius(100%);
+      background-color: @process-circle-bg;
+      width: @process-circle-size;
+      height: @process-circle-size;
+      color: @process-circle-color;
+      font-size: @process-font-size;
+      text-align: center;
+      i {
+        margin-top: 12px;
+      }
+    }
+  }
+}
