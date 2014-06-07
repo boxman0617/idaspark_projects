@@ -4,14 +4,13 @@ var passport = require('passport');
 // @todo: Need to add LocalStrategy to passport
 //var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
-var GoogleStrategy = require('passport-google-oauth').Strategy;
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var GitHubStrategy = require('passport-github').Strategy;
 // Local Settings
 var local = require('./local');
 
 var verifyHandler = function(token, tokenSecret, profile, done) {
 	process.nextTick(function() {
-		console.log('In verify');
 
 		// Get User from DB that matched the profile ID
 		User.findOne({'uid': profile.id}).done(function(err, user) {
@@ -26,13 +25,12 @@ var verifyHandler = function(token, tokenSecret, profile, done) {
 				'uid': profile.id,
 				'name': profile.displayName
 			};
-			console.log(profile);
 
 			if(profile.emails && profile.emails[0] && profile.emails[0].value) {
 				data.email = profile.emails[0].value;
 			}
 			if(profile.name && profile.name.givenName) {
-				data.fistname = profile.name.givenName;
+				data.firstname = profile.name.givenName;
 			}
 			if(profile.name && profile.name.familyName) {
 				data.lastname = profile.name.familyName;
@@ -47,7 +45,7 @@ var verifyHandler = function(token, tokenSecret, profile, done) {
 };
 
 passport.serializeUser(function(user, done) {
-	done(null, user.id);
+	done(null, user.uid);
 });
 
 passport.deserializeUser(function(uid, done) {

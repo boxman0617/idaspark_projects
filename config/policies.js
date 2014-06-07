@@ -20,9 +20,11 @@ module.exports.policies = {
   'HomeController': {
   	'*': 'requireAsync'
   },
+  'MembersController': {
+    '*': 'isAuthenticated'
+  },
   'AuthController': {
-    '*': true,
-    'google': 'requireAsync'
+    '*': true
   }
 
   /*

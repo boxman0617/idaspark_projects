@@ -9,12 +9,10 @@
  */
 module.exports = function(req, res, next) {
   // User is allowed, proceed to controller
-  if (req.isAuthenticated()) {
+  if(req.isAuthenticated()) {
     return next();
-  }
-
-  // User is not allowed
-  else {
+  } else {
+    // User is not allowed in
     return res.redirect('/login');
   }
 };

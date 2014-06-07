@@ -1,5 +1,5 @@
 /**
- * AuthController
+ * MembersController
  *
  * @module      :: Controller
  * @description	:: A set of functions called `actions`.
@@ -14,45 +14,17 @@
  *
  * @docs        :: http://sailsjs.org/#!documentation/controllers
  */
-var passport = require('passport');
 
 module.exports = {
+    
+  
 
-	'google': function(req, res) {
-		passport.authenticate('google', {
-				failureRedirect: '/login',
-				scope: [
-					'profile',
-					'https://www.googleapis.com/auth/plus.profile.emails.read'
-				]
-			},
-      function(err, user) {
-        req.logIn(user, function(err) {
-          if(err) {
-            console.log(err);
-            res.view('500');
-            return;
-          }
-
-          res.redirect('/');
-          return;
-        });
-      })(req, res);
-	},
-
-	'facebook': function(req, res) {
-
-	},
-
-	'github': function(req, res) {
-
-	},
 
   /**
    * Overrides for the settings in `config/controllers.js`
-   * (specific to AuthController)
+   * (specific to MembersController)
    */
   _config: {}
 
-
+  
 };
