@@ -1,107 +1,119 @@
 // Colors
 
-@gray-lightest: 		#FFFFFF;
-@blue-highlight:		#D1E751;
-@gray-darkest: 			#000000;
-@green-dark: 				#26ADE4;
-@green-light: 			#4DBCE9;
-@green-lightest: 		#B4E5F7;
+@gray-lightest            : #FFFFFF;
+@blue-highlight           : #D1E751;
+@gray-darkest             : #000000;
+@green-dark               : #26ADE4;
+@green-light              : #4DBCE9;
+@green-lightest           : #B4E5F7;
 
-@body-bg: 						@gray-lightest;
+@google-bg                : #EE1729;
+@google-fg                : #FFFFFF;
+@facebook-bg  						: #3D62B3;
+@facebook-fg  						: #FFFFFF;
+@github-bg  							: #f3f3f3;
+@github-fg                : #333333;
 
-@main-header-bg:     	@green-light;
-@main-header-bg-hover: @green-dark;
-@main-header-border-color: @blue-highlight;
+@body-bg                  : @gray-lightest;
 
-@cat-menu-bg-color:  	@green-light;
-@cat-menu-bg-hover:  	@green-dark;
-@cat-menu-color:     	@gray-lightest;
+@main-header-bg           : @green-light;
+@main-header-bg-hover     : @green-dark;
+@main-header-border-color : @blue-highlight;
 
-@footer-border: 			@green-light;
-@footer-bg-color: 		darken(@gray-lightest, 5%);
+@cat-menu-bg-color        : @green-light;
+@cat-menu-bg-hover        : @green-dark;
+@cat-menu-color           : @gray-lightest;
 
-@markee-a-bg: 				darken(@gray-lightest, 3%);
-@markee-a-bg-hover:		@green-light;
-@markee-a-color: 			@markee-a-bg-hover;
-@markee-a-color-hover:@gray-lightest;
-@markee-border-color: @main-header-border-color;
+@footer-border            : @green-light;
+@footer-bg-color          : darken(@gray-lightest, 5%);
 
-@flat-panel-border-c: @main-header-border-color;
-@flat-panel-bg:       darken(@gray-lightest, 5%);
-@flat-panel-bg-process:@green-light;
+@markee-a-bg              : darken(@gray-lightest, 3%);
+@markee-a-bg-hover        : @green-light;
+@markee-a-color           : @markee-a-bg-hover;
+@markee-a-color-hover     : @gray-lightest;
+@markee-border-color      : @main-header-border-color;
 
-@process-circle-bg:   @green-dark;
-@process-circle-color:@gray-lightest;
-@process-color:       @gray-lightest;
+@flat-panel-border-c      : @main-header-border-color;
+@flat-panel-bg            : darken(@gray-lightest, 5%);
+@flat-panel-bg-process    : @green-light;
+
+@process-circle-bg        : @green-dark;
+@process-circle-color     : @gray-lightest;
+@process-color            : @gray-lightest;
 
 // Stacking Order [z-index]
 
-@z-base: 						1;
-@z-top: 						100;
+@z-base                   : 1;
+@z-top                    : 100;
 
 // Font-Sizes
-@font-size-change:   1;
+@font-size-change         : 1;
 
-@logo-icon: 				25px + @font-size-change;
-@logo-ida: 					24px + @font-size-change;
-@logo-spark: 				13px + @font-size-change;
-@nav-font-size: 		12px + @font-size-change;
-@cat-font-size: 		9px + @font-size-change;
-@member-font-size:  15px + @font-size-change;
+@logo-icon                : 25px + @font-size-change;
+@logo-ida                 : 24px + @font-size-change;
+@logo-spark               : 13px + @font-size-change;
+@nav-font-size            : 12px + @font-size-change;
+@cat-font-size            : 9px + @font-size-change;
+@member-font-size         : 12px + @font-size-change;
 
-@cat-lineheight: 		@cat-font-size;
-@bootstrap-lineheight: 17px + @font-size-change;
+@cat-lineheight           : @cat-font-size;
+@bootstrap-lineheight     : 17px + @font-size-change;
 
-@process-font-size:  25px;
+@process-font-size        : 25px;
 
 // Fonts
 
-@ida: 							'Oswald', sans-serif;
-@spark: 						'Michroma', sans-serif;
+@ida                      : 'Oswald', sans-serif;
+@spark                    : 'Michroma', sans-serif;
 
 // Padding/Margin
 
-@bottom-gap:         35px;
-@gap: 							10px;
-@wrapper-top-gap: 	30px;
-@row-margin: 				15px;
+@bottom-gap               : 35px;
+@gap                      : 10px;
+@wrapper-top-gap          : 30px;
+@row-margin               : 15px;
 
-@header-logo-ver: 	5px;
-@header-logo-left:  15px;
+@header-logo-ver          : 5px;
+@header-logo-left         : 15px;
 
-@nav-a-ver: 				14px;
-@cat-li-ver: 				6px;
-@cat-a-ver: 				8px;
-@cat-a-left: 				10px;
-@search-box-top: 		7px;
-@search-box-left: 	22px;
+@nav-a-ver                : 14px;
+@cat-li-ver               : 6px;
+@cat-a-ver                : 8px;
+@cat-a-left               : 10px;
+@search-box-top           : 7px;
+@search-box-left          : 22px;
 
-@flat-panel-padding:  10px;
-@process-padding:     20px;
+@flat-panel-padding       : 10px;
+@process-padding          : 20px;
 
-@footer-top-padding:10px;
+@footer-top-padding       : 10px;
 
 //## Panel Padding/Margin
-@panel-padding: 		20px;
+@panel-padding            : 20px;
 
 // Border Sizes
 
-@main-header-border:2px;
-@cat-border:        2px;
-@markee-border: 		@main-header-border;
+@main-header-border       : 2px;
+@cat-border               : 2px;
+@markee-border            : @main-header-border;
 
 // Sizes
 
-@menu-width: 				80px;
-@cat-a-width: 			125px;
-@search-bar-width: 	260px;
-@footer-height: 		100px;
+@menu-width               : 80px;
+@cat-a-width              : 125px;
+@search-bar-width         : 260px;
+@footer-height            : 100px;
 
-@markee-height: 		533px;
+@markee-height            : 533px;
+@markee-signup-btn        : 245px;
 
-@process-circle-size: 50px;
-@process-height:      200px;
+@process-circle-size      : 50px;
+@process-height           : 200px;
 
 // Breakpoints
 
-@small-devices: 		480px;
+@small-devices            : 480px;
+
+// Position
+@markee-signup-top        : 211px;
+@markee-signup-left       : 210px;

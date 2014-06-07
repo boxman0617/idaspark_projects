@@ -1,4 +1,66 @@
 #markee {
+	position: relative;
+	#signup {
+		position: absolute;
+		top: @markee-signup-top;
+		left: @markee-signup-left;
+		z-index: @z-top - 10;
+
+		background-color: rgba(0, 0, 0, 0.5);
+		padding: 20px;
+		ul {
+			list-style: none;
+			margin: 0; padding: 0;
+			li {
+				margin-bottom: 3px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				a {
+					&.btn-google {
+						&:hover {
+							background-color: lighten(@google-bg, 5%);
+						}
+						i {
+							border-right: 1px solid darken(@google-bg, 10%);
+						}
+						border-color: darken(@google-bg, 10%);
+						background-color: @google-bg;
+						color: @google-fg;
+					}
+					&.btn-facebook {
+						&:hover {
+							background-color: lighten(@facebook-bg, 5%);
+						}
+						i {
+							border-right: 1px solid darken(@facebook-bg, 10%);
+						}
+						border-color: darken(@facebook-bg, 10%);
+						background-color: @facebook-bg;
+						color: @facebook-fg;
+					}
+					&.btn-github {
+						&:hover {
+							background-color: darken(@github-bg, 5%);
+						}
+						i {
+							border-right: 1px solid darken(@github-bg, 10%);
+						}
+						border-color: darken(@github-bg, 10%);
+						background-color: @github-bg;
+						color: @github-fg;
+					}
+					i {
+						width: 20px;
+						margin-right: 5px;
+					}
+					width: @markee-signup-btn;
+					text-align: left;
+				}
+			}
+		}
+	}
+
 	height: @markee-height;
 	#markee-slides {
 		.carousel-inner {

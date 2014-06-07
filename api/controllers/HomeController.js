@@ -21,6 +21,18 @@ module.exports = {
   	res.view();
   },
 
+  'getCategories': function(req, res) {
+    Categories.find()
+      .where({'name': {'!': 'More'}})
+      .done(function(err, categories) {
+        if(err) {
+          res.json({'err': err}, 500);
+        }
+
+        res.json(categories, 200);
+      });
+  },
+
   'fill': function(req, res) {
   	var links = {
 	  	'Home': [

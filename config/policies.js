@@ -19,6 +19,10 @@ module.exports.policies = {
   '*': true,
   'HomeController': {
   	'*': 'requireAsync'
+  },
+  'AuthController': {
+    '*': true,
+    'google': 'requireAsync'
   }
 
   /*
