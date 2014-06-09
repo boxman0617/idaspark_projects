@@ -19,6 +19,8 @@ var verifyHandler = function(token, tokenSecret, profile, done) {
 				return done(null, user);
 			}
 
+			console.log(profile);
+
 			// If User is NOT found, we create in DB
 			var data = {
 				'provider': profile.provider,

@@ -41,7 +41,19 @@ module.exports = {
 	},
 
 	'facebook': function(req, res) {
+		passport.authenticate('facebook', {
+			failureRedirect: '/login',
+			scope: ['email', 'public_profile']
+		}, function(err, user) {
+			if(err) {
+				console.log(err);
+				res.view('500');
+				return;
+			}
 
+			res.redirect('/');
+			return;
+		})(req, res);
 	},
 
 	'github': function(req, res) {
