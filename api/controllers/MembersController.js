@@ -16,9 +16,11 @@
  */
 
 module.exports = {
-    
-  
 
+
+  'profile': function(req, res) {
+    res.view();
+  },
 
   /**
    * Overrides for the settings in `config/controllers.js`
@@ -26,5 +28,5 @@ module.exports = {
    */
   _config: {}
 
-  
+
 };

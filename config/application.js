@@ -19,8 +19,6 @@ var verifyHandler = function(token, tokenSecret, profile, done) {
 				return done(null, user);
 			}
 
-			console.log(profile);
-
 			// If User is NOT found, we create in DB
 			var data = {
 				'provider': profile.provider,
@@ -28,13 +26,19 @@ var verifyHandler = function(token, tokenSecret, profile, done) {
 				'name': profile.displayName
 			};
 
+			if(profile.provider === 'github') {
+				var name = profile.displayName.split(' ');
+				data.firstname = name[0];
+				data.lastname = name[1];
+			}
+
 			if(profile.emails && profile.emails[0] && profile.emails[0].value) {
 				data.email = profile.emails[0].value;
 			}
-			if(profile.name && profile.name.givenName) {
+			if(profile.name && profile.name.givenName && !data.firstname) {
 				data.firstname = profile.name.givenName;
 			}
-			if(profile.name && profile.name.familyName) {
+			if(profile.name && profile.name.familyName && !data.lastname) {
 				data.lastname = profile.name.familyName;
 			}
 

@@ -34,7 +34,7 @@ module.exports = {
             return;
           }
 
-          res.redirect('/');
+          res.redirect('/profile');
           return;
         });
       })(req, res);
@@ -51,13 +51,24 @@ module.exports = {
 				return;
 			}
 
-			res.redirect('/');
+			res.redirect('/profile');
 			return;
 		})(req, res);
 	},
 
 	'github': function(req, res) {
+		passport.authenticate('github', {
+			failureRedirect: '/login'
+		}, function(err, user) {
+			if(err) {
+				console.log(err);
+				res.view('500');
+				return;
+			}
 
+			res.redirect('/profile');
+			return;
+		})(req, res);
 	},
 
   /**

@@ -21,7 +21,7 @@ module.exports.policies = {
   	'*': 'requireAsync'
   },
   'MembersController': {
-    '*': 'isAuthenticated'
+    '*': ['isAuthenticated', 'requireAsync']
   },
   'AuthController': {
     '*': true
